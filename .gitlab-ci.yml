@@ -1,0 +1,14 @@
+image: gradle:alpine
+
+stages:
+  - test
+  - run
+
+
+test:
+  stage: test
+  script: ./gradlew install test
+
+run:
+  stage: run
+  script: ./gradlew install run
